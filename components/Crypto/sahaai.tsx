@@ -22,7 +22,7 @@ const client = createThirdwebClient({
   clientId: "19490c4ed25bd67afd3cceec71670335",
 });
 
-const Sahaai: React.FC<sahaaiProps> = ({
+const ChatSahaai: React.FC<sahaaiProps> = ({
   chainId,
   sahaai_manager_contract,
   token_manager_contract,
@@ -103,6 +103,7 @@ const Sahaai: React.FC<sahaaiProps> = ({
         setUserId(user_id);
       } else {
         toast.error("Please connect your wallet");
+        return "";
       }
       // Define the API endpoint
       const chatApiUrl = process.env.NEXT_PUBLIC_SERVER_URL;
@@ -538,4 +539,4 @@ const Sahaai: React.FC<sahaaiProps> = ({
     </div>
   );
 };
-export default Sahaai;
+export default ChatSahaai;
